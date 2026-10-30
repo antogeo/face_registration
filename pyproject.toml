@@ -1,13 +1,13 @@
-[build-system] 
-requires = ["setuptools>=68", "wheel"] 
+[build-system]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "face_registration" 
-version = "0.1.0" 
+name = "face_registration"
+version = "0.1.0"
 description = "Learning project: detect, align, and blend faces."
-readme = "README.md" 
-requires-python = ">=3.10" 
+readme = "README.md"
+requires-python = ">=3.10"
 authors = [{ name = "antogeo" }]
 license = { text = "MIT" }
 dependencies = [
@@ -15,21 +15,21 @@ dependencies = [
 "numpy>=1.26",
 ]
 
-[project.optional-dependencies] 
+[project.optional-dependencies]
 dev = [
 "pytest>=8",
 "ruff>=0.6",
 ]
 
-[tool.setuptools.packages.find] 
+[tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.ruff] 
-line-length = 100 
+[tool.ruff]
+line-length = 100
 target-version = "py310"
 
-[tool.ruff.lint] 
+[tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 
-[tool.pytest.ini_options] 
+[tool.pytest.ini_options]
 testpaths = ["tests"]
