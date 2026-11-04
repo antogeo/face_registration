@@ -19,6 +19,13 @@ env/
 .DS_Store
 Thumbs.db
 
+# Local data and model weights (too big / not ours to commit)
+data/
+models/*
+!models/README.md
+
 # Local secrets / env files (just in case)
 .env
 .env.local
+
+CLAUDE.md
