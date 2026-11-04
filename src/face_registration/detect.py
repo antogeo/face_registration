@@ -84,11 +84,10 @@ def detect_faces(
         box = tuple(round(float(v) / scale) for v in r[:4])
         landmarks = [(round(r[i] / scale), round(r[i + 1] / scale)) for i in range(4, 14, 2)]
         faces.append(Face(box=box, landmarks=landmarks, score=float(r[14])))
+    # return sorted(faces, key=box_area, reverse=True)    
     # could also be written as:
     # def box_area(f):
     #     return f.box[2] * f.box[3]
-
-    # return sorted(faces, key=box_area, reverse=True)    
     return sorted(faces, key=lambda f: f.box[2] * f.box[3], reverse=True)
 
 
